@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+
+</head>
+
+<body>
+
+
+    <div class="login-wrap">
+        <div class="login-html">
+
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrar</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group"><br><br>
+                        <label for="user" class="label">Username</label>
+                        <input type="text" class="input" id="exampleInputUsername1" aria-describedby="username" name="username" #username="ngModel" [(ngModel)]="usuarioModel.username">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input type="password" class="input" data-type="password" id="exampleInputPassword1" aria-describedby="password" name="password" #password="ngModel" [(ngModel)]="usuarioModel.password">
+                    </div>
+                    <div class="group"><br>
+                        <input type="submit" class="button" (click)="login()" value="Ingresar">
+                    </div>
+                    <div class="hr"></div>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group"><br><br>
+                        <label for="user" class="label">Username</label>
+                        <input type="text" class="input" id="inputUsername1" name="username1" #username="ngModel" [(ngModel)]="usuarioModel.username">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input type="password" class="input" data-type="password" id="exampleInputPassword1" name="password" #password="ngModel" [(ngModel)]="usuarioModel.password">
+                    </div>
+                    <div class="group"><br>
+                        <input type="submit" class="button" (click)="registrar()" value="Registrarse">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Listo para Ingresar></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
